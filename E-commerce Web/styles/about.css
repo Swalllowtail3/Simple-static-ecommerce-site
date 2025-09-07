@@ -1,0 +1,214 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+header{
+    padding: 20px 70px;
+    position: fixed;
+    z-index: 100;
+    background-color: aliceblue;
+    width: 100%;
+}
+.head-title{
+    font-size: 3.8rem;
+    font-family: 'Playfair Display', serif;
+    color: #002c3e;
+    margin-bottom: 13px;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-img{
+    height: 45px;
+}
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 80px;
+    margin-right: 20px;
+}
+li a{
+    transition: 0.2s ease;
+    text-decoration: none;
+    color: black;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+li a:hover{
+    color: #f7444e;
+}
+.contents{
+    font-size: 19px;
+    line-height: 1.6;
+}
+.buttons-style{
+    padding: 12px 45px;
+    background-color: #f7444e;
+    border: 1px solid #f7444e;
+    color: #ffffff;
+    font-weight: lighter;
+    transition: all 0.3s;
+    margin-top: 10px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.buttons-style:hover{
+    background-color: transparent;
+    color: #f7444e;
+}
+.buttons-style:active{
+    opacity: 0.2;
+}
+.about{
+    padding: 130px 70px;
+    position: relative;
+}
+.about-tittle{
+    margin-top: 77px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    text-align: center;
+    background-color: #f7444e;
+    color: white;
+    padding: 40px;
+}
+.head-title{
+    font-size: 3.8rem;
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 13px;
+    padding-top: 100px;
+}
+.Why-Us{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.red-dash{
+    background-color: #f7444e;
+    height: 5px;
+    width: 11vh;
+    margin: 20px auto 50px;
+}
+.service-card{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100%;
+    gap: 20px;
+}
+.delivery, 
+.shipping, 
+.quality{
+    height: 300px;
+    width: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    line-height: 2;
+    color: #ffffff;
+    background-color: #002c3e;
+}
+.title-card{
+    font-size: 20px;
+    font-weight: 600;
+}
+.New-Arrival{
+    position: relative;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    padding: 0px 70px;
+}
+.new-arrival-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+}
+.left-arrival{
+    text-align: start;
+    width: 80vh;
+    line-height: 2;
+}
+.arrival-title{
+    font-size: 3.5rem;
+    color: #002c3e;
+}
+footer{
+    background-color: #002c3e;
+    color: #ffffff;
+    font-family: 'Playfair Display', serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.find-us{
+    padding: 30px 70px;
+    display: flex;
+    gap: 200px;
+}
+.socials-tittle{
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.list-info {
+    list-style: none;
+    text-decoration: none;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+.list-info a{
+    text-decoration: none;
+    color: #ffffff;
+    line-height: 3;
+    font-weight: lighter;
+    transition: 0.3s ease;
+}
+
+.list-info a:hover{
+    color: #f7444e;
+}
+
+.socials{
+    font-size: 40px;
+}
+.socials a{
+    color: #ffffff;
+    transition: 0.3s ease;
+}
+.socials a:hover{
+    color: #f7444e;
+
+}
+.All-reserve{
+    font-family: "Plus Jakarta Sans", sans-serif;
+    text-align: center;
+    line-height: 2;
+}
+.page-transition {
+  position: fixed;
+  inset: 0;
+  background: white;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  animation: fadeOut 0.9s forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}

@@ -1,0 +1,258 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+body{
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+header{
+    padding: 20px 70px;
+    position: fixed;
+    z-index: 100;
+    background-color: aliceblue;
+    width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.logo-img{
+    height: 30px;
+}
+.checkout{
+    font-size: 1.5rem;
+    margin-right: 100px;
+    font-weight: 800;
+    color: #002c3e;
+}
+.lock-icon{
+    color: #002c3e;
+    font-size: 1.4rem;
+}
+.items{
+    color: #f7444e;
+}
+
+.main-container{
+    padding-top: 100px;
+    padding: 130px 40px;
+    font-size: 1rem;
+    color: #002c3e;
+}
+.page-title{
+    font-weight: 700;
+    font-size: 1.2rem;
+    margin-bottom: 19px;
+}
+.checkout-grid{
+    display: grid;
+    grid-template-columns: 1fr 350px;
+    column-gap: 20px;
+    align-items: start;
+    grid-template-areas:
+    "orders summary";
+}
+.product-img{
+    height: 128px;
+}
+
+.orders-container {
+  grid-area: orders;
+  display: flex;
+  flex-direction: column;
+  gap: 20px; 
+}
+.order-card{
+    padding: 20px;
+    border: 1px solid rgb(222, 222, 222);
+    border-radius: 4px;
+    grid-area: orders;
+}
+.status{
+    color: #f7444e;
+    font-weight: 800;
+    font-size: 1.2rem;
+}
+.info-deliver-container{
+    display: flex;
+    gap: 80px;
+    margin-top: 20px;
+}
+.deliver-info{
+    display: flex;
+    gap: 30px;
+}
+.product-info{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.product-name{
+    font-weight: 700;
+}
+.cost{
+    color: rgb(136, 2, 2);
+    font-weight: 700;
+}
+
+.quantity-product{
+    display: flex;
+    gap: 8px;
+    font-size: 0.9rem;
+}
+.update, 
+.delete{
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+.update:hover, .delete:hover{
+    color: #f7444e;
+}
+.delivery-option-title {
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.delivery-option {
+  display: grid;
+  grid-template-columns: 24px 1fr;
+  margin-bottom: 12px;
+  cursor: pointer;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.delivery-option-input {
+  margin-left: 0px;
+  cursor: pointer;
+}
+
+.delivery-option-date {
+  color: rgb(0, 118, 0);
+  font-weight: 500;
+  margin-bottom: 3px;
+}
+
+.delivery-option-price {
+  color: rgb(120, 120, 120);
+  font-size: 15px;
+}
+/* payment */
+.payment-summary{
+    padding: 20px;
+    border: 1px solid rgb(222, 222, 222);
+    border-radius: 4px;
+     grid-area: summary;
+  align-self: start; 
+}
+.payment-summary-title {
+  font-weight: 700;
+  font-size: 18px;
+  margin-bottom: 12px;
+}
+
+.payment-summary-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+
+  font-size: 15px;
+  margin-bottom: 9px;
+}
+
+.payment-summary-money {
+  text-align: right;
+}
+
+.subtotal-row .payment-summary-money {
+  border-top: 1px solid rgb(222, 222, 222);
+}
+
+.subtotal-row div {
+  padding-top: 9px;
+}
+
+.total-row {
+  color: rgb(177, 39, 4);
+  font-weight: 700;
+  font-size: 18px;
+
+  border-top: 1px solid rgb(222, 222, 222);
+  padding-top: 18px;
+}
+
+.place-order-button {
+  width: 100%;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-radius: 8px;
+  margin-top: 11px;
+  margin-bottom: 15px;
+  background-color: #f7444e;
+  border: none;
+  color: white;
+  transition: 0.3s ease;
+}
+.place-order-button:hover{
+    background-color: transparent;
+    color: #f7444e;
+    border: 1px solid #f7444e;
+}
+.place-order-button:active{
+    opacity: 0.3;
+}
+    
+
+@media (max-width: 1000px) {
+    .checkout-grid {
+      grid-template-columns: 1fr;
+      grid-template-areas:
+        "summary"
+        "orders";
+    }
+    .payment-summary {
+      grid-row: 1; 
+      margin-bottom: 20px;
+    }
+
+    .info-deliver-container {
+      flex-direction: column;
+      gap: 20px;
+    }
+
+    .deliver-info {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .product-img {
+      margin-bottom: 10px;
+    }
+  }
+
+
+@media (max-width: 600px) {
+    header {
+      padding: 10px 20px;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+
+    .place-order-button {
+      width: 100%; 
+    }
+  }
+.page-transition {
+  position: fixed;
+  inset: 0;
+  background: white;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0;
+  animation: fadeOut 0.9s forwards;
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to   { opacity: 0; }
+}
